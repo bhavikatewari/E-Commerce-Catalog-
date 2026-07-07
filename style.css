@@ -1,1 +1,231 @@
 
+/* ===============================
+   TechNova Store
+   Developed by Bhavika Tewari
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0B1120;
+color:#F8FAFC;
+}
+
+/* Navbar */
+
+nav{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(17,24,39,.85);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#3B82F6;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#F8FAFC;
+transition:.3s;
+font-weight:500;
+}
+
+nav ul li a:hover{
+color:#60A5FA;
+}
+
+.cart{
+font-size:20px;
+cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:linear-gradient(rgba(11,17,32,.85),rgba(11,17,32,.95)),
+url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#CBD5E1;
+font-size:20px;
+margin-bottom:35px;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:linear-gradient(135deg,#2563EB,#3B82F6);
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px rgba(59,130,246,.45);
+}
+
+/* Features */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:80px 8%;
+}
+
+.feature-card{
+background:#1E293B;
+padding:35px;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+border:1px solid #334155;
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(59,130,246,.25);
+}
+
+.feature-card h2{
+margin:15px 0;
+}
+
+/* Developer */
+
+.developer{
+padding:70px 8%;
+text-align:center;
+}
+
+.developer h2{
+color:#3B82F6;
+margin-bottom:15px;
+}
+
+.developer h3{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.developer p{
+color:#CBD5E1;
+margin:8px 0;
+}
+
+/* Footer */
+
+footer{
+background:#111827;
+text-align:center;
+padding:30px;
+color:#94A3B8;
+margin-top:60px;
+}
+
+/* Watermark */
+
+.watermark{
+position:fixed;
+bottom:15px;
+right:15px;
+font-size:14px;
+color:rgba(255,255,255,.08);
+font-weight:600;
+pointer-events:none;
+text-align:right;
+}
+
+/* Animation */
+
+.hero,
+.feature-card,
+.developer{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.features{
+padding:50px 5%;
+}
+
+}
